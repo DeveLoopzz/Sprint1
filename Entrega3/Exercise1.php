@@ -4,9 +4,10 @@
     $decimal = 1.2;
     $text = "text";
     $boleano = true;
+    define("miNombre", "Sergio");
 
     echo $int, $decimal, $text, $boleano;
 
-    define("miNombre", "Sergio");
+    
 
 echo "mi nombre es: " . miNombre;
