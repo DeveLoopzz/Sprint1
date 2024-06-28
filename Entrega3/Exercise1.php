@@ -9,6 +9,4 @@
 
     define("miNombre", "Sergio");
 
-    echo miNombre;
-
 echo "mi nombre es: " . miNombre;
