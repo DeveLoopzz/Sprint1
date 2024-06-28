@@ -33,6 +33,9 @@
     //PRODUCT 
     echo $int1 * $int2 * $double1 * $double2;
 
+    //CALCULATOR TEST
+    echo calculator($int1, $int2, "*");
+
     //FUNCTION CALCULATOR
     
     function calculator($num1, $num2, $operator ) {
@@ -61,5 +64,4 @@
         return $result;
     }
 
-    //CALCULATOR TEST
-    echo calculator($int1, $int2, "*");
+
