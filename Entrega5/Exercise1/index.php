@@ -2,8 +2,7 @@
 
     require 'Exercise1.php';
 
-    $employee1 = new Employee;
-    $employee1 ->newEmployee("Sergio", 6000);
+    $employee1 = new Employee("Sergio", 6000);
 
     echo $employee1->print();
 

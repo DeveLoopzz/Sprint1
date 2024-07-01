@@ -6,7 +6,7 @@ class Employee {
 
 
     //CONSTRUCTOR
-    public function _construct($name, $salary) {
+    public function __construct($name, $salary) {
         $this->name = $name;
         $this->salary= $salary;
     }
@@ -32,11 +32,6 @@ class Employee {
 
     //METHODS
 
-    public function newEmployee($name, $salary) {
-        $this->name = $name;
-        $this->salary = $salary;
-    }
-
     public function print() {
         $response = "Name:" . $this->name . "<br>" . "Salary:" . $this->salary . "<br>" . "Taxes: NO";
         if($this->salary > 6000) {
@@ -44,6 +39,4 @@ class Employee {
         }
         return $response; 
     }
-
-
 }
