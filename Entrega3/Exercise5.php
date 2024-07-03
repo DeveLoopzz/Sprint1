@@ -4,7 +4,7 @@
 echo division(rand(1, 100));
 
 //FUNCTION DECLARATION
-function division($nota){
+function division(int $nota) : String{
     if($nota < 33){
         $response = "L'alumne ha suspés";
     }
