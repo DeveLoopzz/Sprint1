@@ -8,10 +8,10 @@ function division($nota){
     if($nota < 33){
         $response = "L'alumne ha suspés";
     }
-    else if($nota >= 33 && $nota <= 44){
+    else if($nota <= 44){
         $response = "L'alumne es de tercera divisó";
     }
-    else if($nota >= 45 && $nota <= 59){
+    else if($nota <= 59){
         $response = "L'alumne es de segona divisó";
     }
     else{
