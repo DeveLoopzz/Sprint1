@@ -34,11 +34,11 @@
     echo $int1 * $int2 * $double1 * $double2;
 
     //CALCULATOR TEST
-    echo calculator($int1, $int2, "*");
+    echo calculator($int1, $int2, "");
 
     //FUNCTION CALCULATOR
     
-    function calculator($num1, $num2, $operator ) {
+    function calculator(float $num1, float $num2,string $operator ) : String {
         if ($operator == '+') {
             $result = $num1 + $num2;
         }
@@ -58,10 +58,13 @@
             }   
         }
         else {
-            echo "Invalid operator";
+            $result = "Invalid operator";
         }
 
         return $result;
     }
+
+    //CORRECCION CAMBIO EL RETURN A UN STRING Y  CAMBIO EL  VALOR DE RESULT A INVALID OPERATOR
+    // SI ESTE NO ESTA ENTRE LOS QUE QUIERO. :)
 
 

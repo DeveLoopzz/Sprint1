@@ -14,7 +14,7 @@ function division($nota){
     else if($nota >= 45 && $nota <= 59){
         $response = "L'alumne es de segona divisó";
     }
-    else if($nota >= 60){
+    else{
         $response = "L'alumne es de primera divisó";
     }
     return $response;

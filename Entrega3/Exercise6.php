@@ -2,7 +2,7 @@
 
 echo isBitten();
 
-function isBitten() {
+function isBitten() : String {
     $bite = rand(1,2);
 
     if($bite == 1) {

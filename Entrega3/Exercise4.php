@@ -1,13 +1,14 @@
 <?php
 
 //TEST
-counter(20 , 3);
+counter(20);
 
 
 //FUNCTION DECLARATION
-function counter($limit, $counter){
-    for($i = 0; $i <= $limit;){
-        echo $i . " ";
+function counter(int $limit,int $counter = 1){
+    $i = 0;
+    while($i <= $limit) {
+        echo $i . "<br>";
         $i += $counter;
     }
 }
