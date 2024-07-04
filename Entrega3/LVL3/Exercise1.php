@@ -21,7 +21,10 @@ function erastotenes100(array $arrayNums) : array{
         if(!in_array($i, $arrayDelete)){
             for($j = 2; ($i * $j) <= $numMax; $j++){
                 $numDelete = ($i * $j);
-                $arrayDelete[] = $numDelete;
+                if(!in_array($numDelete, $arrayDelete)){
+                    $arrayDelete[] = $numDelete;
+                }
+                //$arrayDelete[] = $numDelete;
             }
             }
         }
