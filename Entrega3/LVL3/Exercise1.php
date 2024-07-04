@@ -2,7 +2,7 @@
 
 $arrayNums = [];
 
-//GENERO NUMEROS DEL 1 AL 100 EN EL ARRAY CREADO ARRIBA
+//YOU CAN ADD THE NUMBER OF YOUR CHOICE TO THE ARRAY IN THIS CASE '1000'
 for($i = 1; $i <= 1000; $i++){
     $arrayNums[] = $i;
 }
@@ -13,7 +13,7 @@ $numsPrimers = erastotenes100($arrayNums);
 //IMPRIMO EL ARRAY COMPLETO PARA VER LOS RESULTADOS, FUTURAMENTE CAMBIAR POR UN FOR EACH
 print_r($numsPrimers);
 
-//DADO UN LIMITE DE 100 CARACTERES
+//FUNCTION
 function erastotenes100(array $arrayNums) : array{
     $arrayDelete= [];
     $numMax = max($arrayNums);
@@ -24,7 +24,6 @@ function erastotenes100(array $arrayNums) : array{
                 if(!in_array($numDelete, $arrayDelete)){
                     $arrayDelete[] = $numDelete;
                 }
-                //$arrayDelete[] = $numDelete;
             }
             }
         }
