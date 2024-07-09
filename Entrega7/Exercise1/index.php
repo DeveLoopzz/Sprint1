@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +12,7 @@
         <form action="Exercise1.php" method="post">
             <p>Nombre:<input type="text" name="name"></p>
             <p>Username:<input type="text" name="username"></p>
+            <p>Email:<input type="text" name="email"></p>
             <p><input type="submit" value ="enviar"></p>
         </form>
     </body> 
