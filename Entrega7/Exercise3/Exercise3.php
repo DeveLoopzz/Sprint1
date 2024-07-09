@@ -15,7 +15,7 @@ class Cat {
 
 $cat1 = new Cat();
 
-echo $cat1->__toString();
+echo $cat1;
 
 
 
