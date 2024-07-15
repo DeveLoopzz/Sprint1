@@ -4,22 +4,28 @@ use PHPUnit\Framework\TestCase;
 use function PHPUnit\Framework\assertSame;
 
 final class Exercise5TDDTest extends TestCase {
-    protected $suspes;
-    protected $tercera;
-    protected $segona;
-    protected $primera; 
+    protected $nota;
 
     function setUp():void {
-        $this->suspes = new Division(30);
-        $this->tercera = new Division(40);
-        $this->segona = new Division(50);
-        $this->primera = new Division(60);
+        $this->nota = new Division(30);
     }
 
-    public function testDivision() {
-        $this->assertSame($this->suspes->division(), "L'alumne ha suspés");
-        $this->assertSame($this->tercera->division(), "L'alumne es de tercera divisó");
-        $this->assertSame($this->segona->division(), "L'alumne es de segona divisó");
-        $this->assertSame($this->primera->division(), "L'alumne es de primera divisó");
+    public function testSuspes() {
+        $this->assertSame($this->nota->division(), "L'alumne ha suspés");
+    }
+
+    public function testTercera() {
+        $this->nota->setNum(40);
+        $this->assertSame($this->nota->division(), "L'alumne es de tercera divisó");
+    }
+
+    public function testSegona() {
+        $this->nota->setNum(50);
+        $this->assertSame($this->nota->division(), "L'alumne es de segona divisó");
+    }
+
+    public function testPrimera() {
+        $this->nota->setNum(60);
+        $this->assertSame($this->nota->division(), "L'alumne es de primera divisó");
     }
 }

@@ -10,5 +10,9 @@ class NumberChecker  {
 		return $this->number > 0;
 	}
 
+	public function setNumber($newNumber) {
+		$this->number = $newNumber;
+	}
+
 }
 ?>

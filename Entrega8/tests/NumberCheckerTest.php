@@ -3,32 +3,33 @@ use PHPUnit\Framework\TestCase;
 
 final class NumberCheckerTest extends TestCase
 {       
-    protected $even;
-    protected $notEven;
-    protected $positive;
-    protected $notPositive;
+    protected $num;
 
     function setUp():void{
-        $this->even = new NumberChecker(10);
-        $this->notEven = new NumberChecker(21);
-        $this->positive = new NumberChecker(10);
-        $this->notPositive = new NumberChecker(-10);
+        $this->num = new NumberChecker(10);
     }
 
     public function testIsEven() {
-        $this->assertIsBool($this->even->isEven());
-        $this->assertTrue($this->even->isEven());
+        $this->assertIsBool($this->num->isEven());
+        $this->assertTrue($this->num->isEven());
     }
 
     public function testIsNotEven() {
-        $this->assertIsBool($this->notEven->isEven());
-        $this->assertFalse($this->notEven->isEven());
+        $this->num->setNumber(11);
+        $this->assertIsBool($this->num->isEven());
+        $this->assertFalse($this->num->isEven());
     }
 
     public function testIsPositive(){
-        $this->assertIsBool($this->positive->isPositive());
-        $this->assertIsBool($this->notPositive->isPositive());
-        $this->assertTrue($this->positive->isPositive());
-        $this->assertFalse($this->notPositive->isPositive());
+        $this->num->setNumber(11);
+        $this->assertTrue($this->num->isPositive());
+        $this->assertIsBool($this->num->isPositive());
+        
+    }
+
+    public function testIsNegative() {
+        $this->num->setNumber(-11);
+        $this->assertFalse($this->num->isPositive());
+        $this->assertIsBool($this->num->isPositive());
     }
 }

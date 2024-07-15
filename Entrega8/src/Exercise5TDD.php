@@ -21,4 +21,8 @@ public function division() : String{
     }
     return $response;
     }
+
+    public function setNum($num) {
+        $this->num1 = $num;
+    }
 }
