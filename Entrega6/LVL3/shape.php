@@ -2,5 +2,6 @@
 
    interface Shapes {
         public function calcArea();
+
 }
 
