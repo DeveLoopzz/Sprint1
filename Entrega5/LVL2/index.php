@@ -33,5 +33,4 @@ echo $arrayDice[0]->getTotalThrows();
             $arrayDice[] = $dice;
         }
         return $arrayDice;
-
 }
