@@ -6,7 +6,7 @@ $arrayCube = array_map('cube',$array);
 
 
 function cube($number){
-    return $number * $number *$number;
+    return $number ** 3;
 }
 
 print_r($arrayCube);
