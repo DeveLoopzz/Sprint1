@@ -24,7 +24,6 @@ final class NumberCheckerTest extends TestCase
         $this->num->setNumber(11);
         $this->assertTrue($this->num->isPositive());
         $this->assertIsBool($this->num->isPositive());
-        
     }
 
     public function testIsNegative() {
