@@ -44,4 +44,12 @@
             }
             return $info;
         }
+
+        public function searchForLongest(): int {
+            $arrayDuration = [];
+            foreach($this->arrayMovies as $movie) {
+               $arrayDuration[] = $movie->getDuration();
+            }
+            return max($arrayDuration);
+        }
     }

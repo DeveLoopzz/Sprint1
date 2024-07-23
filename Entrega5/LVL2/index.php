@@ -3,34 +3,38 @@
 require 'pokerDice.php';
 
 $arrayDice = [];
+$dice1 = new pokerDice;
+$dice2 = new pokerDice;
+$dice3 = new pokerDice;
+$dice4 = new pokerDice;
+$dice5 = new pokerDice;
 
-$arrayDice = throw5Dices($arrayDice);
+array_push($arrayDice, $dice1, $dice2, $dice3, $dice4, $dice5);
 
+throw5Dices($arrayDice);
 foreach($arrayDice as $dice){
     echo "<pre>";
     echo $dice->shapeName();
     echo "</pre>";
 }
 
+echo "<pre> <br>";
 echo $arrayDice[0]->getTotalThrows();
+echo "</pre> <br>";
 
-array_splice($arrayDice, 0);
-
-$arrayDice = throw5Dices($arrayDice);
+throw5Dices($arrayDice);
 foreach($arrayDice as $dice){
     echo "<pre>";
     echo $dice->shapeName();
     echo "</pre>";
 }
 
+echo "<pre> <br>";
 echo $arrayDice[0]->getTotalThrows();
+echo "</pre> <br>";
 
-
-    function throw5Dices($arrayDice): array {
-        for($i = 1; $i <= 5; $i++) {
-            $dice = new pokerDice;
+    function throw5Dices($arrayDice) {
+        foreach($arrayDice as $dice){
             $dice->throw();
-            $arrayDice[] = $dice;
         }
-        return $arrayDice;
 }
