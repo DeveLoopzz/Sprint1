@@ -1,5 +1,7 @@
 <?php
 
+//FALTA PELI MAS LARGA
+
     require 'cinemafranchise.php';
 
     $movies = [];
@@ -31,7 +33,9 @@
 
     echo "<pr>";
     echo $cinema1->movieData() . "<br><br>";
-    echo $cinema2->movieData();
+    echo $cinema2->movieData() . "<br><br>";
+    echo $cinema1->searchForLongest() . "<br><br>";
+    echo $cinema2->searchForLongest() . "<br><br>";
     //echo $franchise->searchForDirector("Clint Eastwood");
     echo "</pr>";
 
