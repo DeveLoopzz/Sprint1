@@ -9,17 +9,15 @@ echo mitjaAlumne($alumnos["Sergio"]) . "<br>";
 
 echo mitjaAlumnes($alumnos);
 
-function mitjaAlumne($alumnos): float {
-    $notaMedia = array_sum($alumnos)  / 5;
+function mitjaAlumne($alumno): float {
+    $notaMedia = array_sum($alumno)  / count($alumno);
     return $notaMedia;
 }
 
 function mitjaAlumnes($alumnos): float {
     $notaMedia = 0;
-    foreach($alumnos as $alumno){
-        foreach($alumno as $nota){
-            $notaMedia += $nota;
-        }
+    foreach($alumnos  as $alumno){
+        $notaMedia += mitjaAlumne($alumno);
     }
-    return $notaMedia / 5;
+    return $notaMedia / count($alumnos);
 }
