@@ -45,11 +45,15 @@
             return $info;
         }
 
-        public function searchForLongest(): int {
+        public function searchForLongest(): string {
             $arrayDuration = [];
+            $movieName = " ";
             foreach($this->arrayMovies as $movie) {
                $arrayDuration[] = $movie->getDuration();
+               if(max($arrayDuration) === $movie->getDuration()) {
+                $movieName .= $movie->getName() . "<br>";
+               }
             }
-            return max($arrayDuration);
+            return $movieName;
         }
     }

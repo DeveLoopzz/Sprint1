@@ -38,6 +38,7 @@
     echo $cinema2->searchForLongest() . "<br><br>";
     //echo $franchise->searchForDirector("Clint Eastwood");
     echo "</pr>";
+    echo "<br><br><br>";
 
     $variable = ($franchise->searchForDirector("Sergio"));
     foreach($variable as $movie) {
