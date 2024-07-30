@@ -10,6 +10,6 @@ class Triangle implements Shapes {
     }
 
     public function calcArea(){
-        return $this->base * $this->height;
+        return $this->base * $this->height / 2;
     }
 }
