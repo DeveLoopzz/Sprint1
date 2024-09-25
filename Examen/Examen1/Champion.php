@@ -4,14 +4,14 @@ require 'dificultad.php';
 require 'rol.php';
 
 Class Champion {
-    private $name;
+    private string $name;
     private Rol $rol;
     private Dificultad $dificultad;
-    private $pasiva;
-    private $skill1;
-    private $skill2;
-    private $skill3;
-    private $ultimate;
+    private string $pasiva;
+    private string $skill1;
+    private string $skill2;
+    private string $skill3;
+    private string $ultimate;
 
     public function __construct(string $name, Rol $rol, Dificultad $dificultad, string $pasiva, string $skill1, string $skill2, string $skill3, string $ultimate) {
         $this->name = $name;
