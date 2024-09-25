@@ -29,4 +29,5 @@ echo "<br>";
 
 echo $hunterNotes->findMonster("Rathalos");
 
-var_dump($hunterNotes-> showWeakness("Rathalos")); 
+
+print_r($hunterNotes-> showWeakness("Rathalos")); 
